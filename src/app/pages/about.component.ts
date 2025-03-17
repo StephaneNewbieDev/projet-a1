@@ -45,7 +45,8 @@ import { CommonModule } from '@angular/common';
            📧 **Email** : contact&#64;gaulois-figurines.com
         </p>
 
-        <a routerLink="/" class="btn btn-primary">Retour à l'accueil</a>
+        <button routerLink="/" class="custom-btn">🏠 Retour à l'accueil</button>
+
         </div>
     `,
     styles: [`
@@ -93,6 +94,26 @@ import { CommonModule } from '@angular/common';
     .btn-primary {
         margin-top: 20px;
     }
+
+.custom-btn {
+    background:rgb(214, 101, 26);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+        transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    background: #fdd90b;
+    transform: scale(1.05);
+    border-radius: 50px;
+    color: black;
+}
+
 `]
 })
 export class AboutComponent {}
