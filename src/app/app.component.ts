@@ -18,4 +18,6 @@ import { FooterComponent } from './components/footer.component';
     main { padding: 20px; }
   `]
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'projet-a1';
+}

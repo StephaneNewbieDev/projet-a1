@@ -5,12 +5,28 @@ import { Product } from '../models/product.model';
     providedIn: 'root',
 })
 export class ProductService {
-    products: Product[] = [
-        { id: 1, name: 'Astérix', price: 29.99 },
-        { id: 2, name: 'Obelix', price: 24.99 },
-];
-
-    getProducts() {
-    return this.products;
-}
+    private products: Product[] = [
+        {
+            id: 1,
+            name: 'Astérix',
+            price: 29.99,
+          image: 'assets/asterix.png'  // ✅ Image pour Astérix
+        },
+        {
+            id: 2,
+            name: 'Obélix',
+            price: 24.99,
+          image: 'assets/obelix.png'  // ✅ Image pour Obélix
+        },
+        {
+            id: 3,
+            name: 'Idéfix',
+            price: 19.99,
+          image: 'assets/idefix.png'  // ✅ Image pour Idéfix
+        }
+    ];
+    
+    getProducts(): Product[] {
+        return this.products;
+    }
 }

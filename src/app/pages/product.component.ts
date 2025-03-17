@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-product',
     standalone: true,
-    imports: [FormsModule], // Import de FormsModule pour [(ngModel)]
+    imports: [FormsModule, CommonModule], // Import de FormsModule pour [(ngModel)]
     template: `
         <h1>Nos Produits</h1>
         <input [(ngModel)]="searchTerm" placeholder="Rechercher..." />
         <ul>
-            <li *NgFor="let product of filteredProducts()">
+            <li *ngFor="let product of products">
             {{ product.name }} - {{ product.price }}€
             </li>
         </ul>
